@@ -48,7 +48,7 @@ if (userPasswordBase.length === 0) {
 }
 
 function genRandom(userPasswordBase) {
-  var randomIndex = Math.floor(Math.random() * passwordLength);
+  var randomIndex = Math.floor(Math.random() * userPasswordBase.length);
   return userPasswordBase[randomIndex];
 }
 
