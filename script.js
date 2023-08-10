@@ -63,9 +63,9 @@ console.log(password);
 var passwordText = document.querySelector("#password");
 passwordText.value = generatedPswrd;
 generatePassword();
+
+
+passwordText.value = password;
 }
-
-passwordText.value = generatedPswrd;
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
