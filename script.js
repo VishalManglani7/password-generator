@@ -1,10 +1,12 @@
-// Assignment Code
+// Assignment Code. Original code was slightly altered with original fuction/var as I built the code 
+//from scratch and then added it in here after.
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
   var passwordText = document.querySelector("#password");
 
+//set parameters for password
 var passwordLength = window.prompt ("Enter a password length from 8-128");
 if(passwordLength >128 || passwordLength < 8){
   console.log("Invalid entry");
@@ -12,6 +14,7 @@ if(passwordLength >128 || passwordLength < 8){
 }
 
 console.log("Continuing");
+//set an empty userbase, and update doms with new arrays
 var userPasswordBase = [];
 
 function userChoiceLowercase() {
@@ -42,11 +45,14 @@ userChoiceLowercase();
 userChoiceUpperCase();
 userChoiceSpecial();
 
+//make sure at least 1 field above was selected, so that password can be generated. if not let user know no password was generated
 if (userPasswordBase.length === 0) {
   console.log('The array is empty.');
-  return "Couldn't include any characters due to invalid type selection";
+  passwordText.value = "No password generated due to user selection";
+  return
 }
 
+//randomize above characters, and set according to above noted password length
 function genRandom(userPasswordBase) {
   var randomIndex = Math.floor(Math.random() * userPasswordBase.length);
   return userPasswordBase[randomIndex];
@@ -59,6 +65,7 @@ for (let i=0; i < passwordLength; i++){
  generatedPswrd += randomChar;
 }
 
+//display the generated password
 passwordText.value = generatedPswrd;
 
 }
