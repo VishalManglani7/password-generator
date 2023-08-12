@@ -41,6 +41,7 @@ function userChoiceSpecial(){
   userPasswordBase = userPasswordBase.concat(specialCharacters);
 }}
 
+//calling fuctions declared above
 userChoiceLowercase();
 userChoiceUpperCase();
 userChoiceSpecial();
