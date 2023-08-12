@@ -1,4 +1,4 @@
-#Assignment 3 - Password Generator
+# Assignment 3 - Password Generator
 
 ## Description
 This page was created to generate random passwords for users between 8-128 characters, while displaying an understanding of new Javascript concepts.
@@ -25,9 +25,13 @@ WHEN I answer each prompt
 THEN my input should be validated and at least one character type should be selected
 WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
-WHEN the password is generated
+WHEN the password is generated<img width="1026" alt="Screenshot 2023-08-12 at 11 17 09 AM"
 THEN the password is either displayed in an alert or written to the page
 ```
+
+## Visuals
+
+![screenshot of site](https://github.com/VishalManglani7/password-generator/assets/139521683/a522bf84-697e-4cf3-99bc-e31c528361bc")
 
 ## License
 
